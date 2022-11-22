@@ -1,39 +1,53 @@
 // Program to create a simple calculator
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <fenv.h>
 
-void convCalc(){
-    int val1; char operator;
-    printf("Input value: \n");scanf("%d",&val1);
+int main(){
+    double val1; char operator;
+    printf("Input initial value: \n");scanf("%lf",&val1);
+    double result = val1;
     while (1)
     {   
-        printf("Input operator (+)(-)(*)(/)(%): \n");scanf("%c",&operator);
+        printf("Input operator (+)(-)(*)(/)(%): (or input = to get result)\n");scanf("%s",&operator);
         if (operator=='=')
         {
-            printf("%d\n", val1);
+            printf("%g\n", result);
             break;
         }
         
-        int val2;
+        double val2;
         switch (operator)
         {
         case '+':
-            scanf("%d",&val2);
-            val1+=val2;
+            printf("Input value: \n");scanf("%lf",&val2);
+            result+=val2;
+            break;
         case '-':
-            scanf("%d",&val2);
-            val1-=val2;
+            printf("Input value: \n");scanf("%lf",&val2);
+            result-=val2;
+            break;
         case '/':
-            scanf("%d",&val2);
-            val1/=val2;
+            printf("Input value: \n");scanf("%lf",&val2);
+            result=result/val2;
+            break;
         case '*':
-            scanf("%d",&val2);
-            val1*=val2;
+            printf("Input value: \n");scanf("%lf",&val2);
+            result=result*val2;
+            break;
         case '%':
-            scanf("%d",&val2);
-            val1%=val2;
+            printf("Input value: \n");scanf("%lf",&val2);
+            result=fmod(result, val2);
+            break;
+        case '=':
+            printf("%g\n", result);
+            break;
         default:
             printf("Invalid input, calculator will exit.\n");
-            main_process();
+            exit(0);
+            break;
         }
     }
+    return 0;
 }

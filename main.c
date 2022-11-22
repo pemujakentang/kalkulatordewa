@@ -5,17 +5,6 @@
 
 int main_process();
 
-void convCalc()
-{
-    int val1;
-    char operator;
-    printf("Input value: \n");
-    scanf("%d", &val1);
-    while (1)
-    {
-        printf("Input operator (+)(-)(*)(/)(%): \n");
-        scanf("%c", &operator);
-        if (operator== '=')
 void convCalc(){
     double val1; char operator;
     printf("Input initial value: \n");scanf("%lf",&val1);
@@ -29,25 +18,6 @@ void convCalc(){
             main_process();
             break;
         }
-
-        int val2;
-        switch (operator)
-        {
-        case '+':
-            scanf("%d", &val2);
-            val1 += val2;
-        case '-':
-            scanf("%d", &val2);
-            val1 -= val2;
-        case '/':
-            scanf("%d", &val2);
-            val1 /= val2;
-        case '*':
-            scanf("%d", &val2);
-            val1 *= val2;
-        case '%':
-            scanf("%d", &val2);
-            val1 %= val2;
         
         double val2;
         switch (operator)
@@ -84,8 +54,6 @@ void convCalc(){
     }
 }
 
-void factorialCalc()
-{
 void factorialCalc(){
     int n, factorial=1;
     printf("Calculate factorial of an integer\n");
@@ -119,20 +87,16 @@ void fibonacciCalc(){
     main_process();
 }
 
-void deretCalc()
-{
+void deretCalc(){
     printf("Work In Progress\n");
     main_process();
 }
 
-void printHelp()
-{
+void printHelp(){
     printf("Help\n");
     main_process();
 }
 
-int main_process()
-{
 int main_process(){
     printf("\n\n");
     printf("=====================[ CALCULATOR DEWA ]===================\n");
@@ -142,12 +106,6 @@ int main_process(){
     printf("1. Kalkulator Konvensional (Tambah Kurang Kali Bagi Modulus)\n");
     printf("2. Faktorial (Input 1 angka untuk mendapatkan faktorialnya.)\n");
     printf("3. Kalkulator deret aritmatika/geometri.\n");
-    printf("4. Help\n");
-    printf("5. Exit\n");
-
-    int selectionInput;
-    scanf("%d", &selectionInput);
-
     printf("4. Print angka fibonacci ke-n\n");
     printf("9. Help\n");
     printf("0. Exit\n");
@@ -182,8 +140,7 @@ int main_process(){
     }
 }
 
-int main()
-{
+int main(){
     main_process();
     return 0;
-}=======
+}

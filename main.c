@@ -5,6 +5,64 @@
 
 int main_process();
 
+void permutation(){
+
+}
+
+void combination(){
+
+}
+
+void bidangdua(){
+//persegi, persegi panjang, lingkaran, segitiga, trapezijum
+}
+
+void bidangtiga(){
+//kubus, balok, bola, prisma&tabung, limas, 
+}
+
+void trigonometric(){
+//sin cos tan csc sec cot
+}
+
+void gcd(){
+//greatest common divisor, ambil dari matdis
+}
+
+void lcm(){
+//least common multiple, ambil dari matdis
+}
+
+void statistics(){
+//average, modus, median, min max, langsung satu input satu output aja
+}
+
+void exponents(){
+//pangkat, akar, logaritma
+}
+
+void converter(){
+//temperatur, jarak (imperial to metric vice versa), binary, octal, decimal, hexadecimal
+}
+
+void gonext(){
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama.");scanf("%d", choice);
+    switch (choice)
+    {
+    case 1:
+        return;
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi.");
+        gonext();
+        break;
+    }
+}
+
 void convCalc(){
     double val1; char operator;
     printf("Input initial value: \n");scanf("%lf",&val1);

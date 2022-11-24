@@ -40,7 +40,7 @@ void permutation(){
     if (n>=0 && r>0 && n>r)
     {
         int npr = factorial(n)/factorial(n-r);
-        printf("Result: %d", npr);
+        printf("Result: %d\n", npr);
         int choice;
         printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
         switch (choice)
@@ -71,13 +71,13 @@ void combination(){
     if (n>=0 && r>0 && n>r)
     {
         int npr = factorial(n)/(factorial(r)*factorial(n-r));
-        printf("Result: %d", npr);
+        printf("Result: %d\n", npr);
         int choice;
         printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
         switch (choice)
         {
         case 1:
-            permutation;
+            combination();
             break;
         case 0:
             main_process();
@@ -229,7 +229,25 @@ void teori_angka(){
 }
 
 void permutasi_kombinasi(){
-
+    int pilihOpsi;
+    printf("Pilih Permutasi (1) atau Kombinasi (2): \n1. Permutasi\n2. Kombinasi\n0. Kembali ke menu utama\n");
+    scanf("%d", &pilihOpsi);
+    switch (pilihOpsi)
+    {
+    case 1:
+        permutation();
+        break;
+    case 2:
+        combination();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi.\n");
+        permutasi_kombinasi();
+        break;
+    }
 }
 
 void convCalc(){

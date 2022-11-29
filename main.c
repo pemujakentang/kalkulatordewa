@@ -24,6 +24,21 @@ int main_process();
 //     }
 // }
 
+double findSqrt(double x)
+{
+    if (x < 2)
+        return x;
+ 
+    double y = x;
+    double z = (y + (x / y)) / 2;
+ 
+    while (abs(y - z) >= 0.00001) {
+        y = z;
+        z = (y + (x / y)) / 2;
+    }
+    return z;
+}
+
 int factorial(int n){
     int factorial = 1;
     for (int i = 1; i <= n; i++)
@@ -95,11 +110,12 @@ void combination(){
     }
 }
 
-double persegi(double* area, double* perimeter){
+double persegi(double* area, double* perimeter, double* sisi){
     double r;
     printf("Masukkan panjang sisi persegi: "); scanf("%lf", &r);
     *area = r*r;
     *perimeter = 4*r;
+    *sisi = r;
 }
 
 double persegi_panjang(double* area, double* perimeter){
@@ -117,7 +133,7 @@ double lingkaran(double* area, double* perimeter){
     *perimeter = M_PI*2*r;
 }
 
-double segitiga(double* area, double* perimeter){
+double segitiga(double* area, double* perimeter, double* alas){
     double a, s1, s2, t;
     printf("Masukkan panjang alas segitiga          : ");scanf("%lf", &a);
     printf("Masukkan tinggi segitiga                : ");scanf("%lf", &t);
@@ -125,6 +141,7 @@ double segitiga(double* area, double* perimeter){
     printf("Masukkan panjang sisi kedua segitiga    : ");scanf("%lf", &s2);
     *area = (a*t)/2;
     *perimeter = a+s1+s2;
+    *alas = a;
 }
 
 double trapezium(double* area, double* perimeter){
@@ -152,7 +169,7 @@ void bidangdua(){
     switch (selection)
     {
     case 1:
-        persegi(&area, &perimeter);
+        persegi(&area, &perimeter, NULL);
         printf("Luas Persegi: %g\nKeliling Persegi: %g\n", area, perimeter);
         break;
     case 2:
@@ -164,7 +181,7 @@ void bidangdua(){
         printf("Luas Lingkaran: %g\nKeliling Lingkaran: %g\n", area, perimeter);
         break;
     case 4:
-        segitiga(&area, &perimeter);
+        segitiga(&area, &perimeter, NULL);
         printf("Luas Segitiga: %g\nKeliling Segitiga: %g\n", area, perimeter);
         break;
     case 5:
@@ -194,6 +211,144 @@ void bidangdua(){
         main_process();
         break;
     };
+}
+
+double kubus(double* volume, double* surface){
+    double r;
+    printf("Masukkan panjang rusuk kubus: "); scanf("%lf", &r);
+    *volume = r*r*r;
+    *surface = 6*r*r;
+}
+
+double balok(double* volume, double* surface){
+    double p,l,t;
+    printf("Masukkan panjang: "); scanf("%lf", &p);
+    printf("Masukkan lebar  : "); scanf("%lf", &l);
+    printf("Masukkan tinggi : "); scanf("%lf", &t);
+    *volume = p*l*t;
+    *surface = 2*p*l + 2*p*t + 2*l*t;
+}
+
+double bola(double* volume, double* surface){
+    double r;
+    printf("Masukkan radius bola: ");scanf("%lf", &r);
+    *volume = (4/3)*M_PI*r*r*r;
+    *surface = 4*M_PI*r*r;
+}
+
+double prisma_segitiga(double* volume, double* surface){
+    double area, perimeter, tinggi;
+    segitiga(&area, &perimeter, NULL);
+    printf("Masukkan tinggi prisma: ");scanf("%lf", &tinggi);
+    *volume = area*tinggi;
+    *surface = perimeter*tinggi + 2*area;
+}
+
+double tabung(double* volume, double* surface){
+    double area, perimeter, tinggi;
+    lingkaran(&area, &perimeter);
+    printf("Masukkan tinggi tabung: ");scanf("%lf", &tinggi);
+    *volume = area*tinggi;
+    *surface = perimeter*tinggi + 2*area;
+}
+
+void prisma(){
+    printf("Pilih prisma: (ketik pililhan)\n");
+    printf("1. Segitiga\n");
+    printf("2. Tabung\n");
+    printf("0. Kembali ke menu sebelumnya\n");
+    int selection;
+    scanf("%d", &selection);
+    double volume, surface;
+    switch (selection)
+    {
+    case 1:
+        prisma_segitiga(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 2:
+        tabung(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 0:
+        bidangtiga();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi\n");
+        prisma();
+        break;
+    }
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        bidangtiga();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
+}
+
+double limas_segitiga(double* volume, double* surface){
+    double area, perimeter, tinggi, tinggisisi, sisi;
+    segitiga(&area, &perimeter, &sisi);
+    printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
+    printf("Masukkan tinggi sisi  : ");scanf("%lf", &tinggisisi);
+    *volume = 1/3*area*tinggi;
+    *surface = area + 3*(1/2*sisi*tinggisisi);
+}
+
+double limas_persegi(double* volume, double* surface){
+    double area, perimeter, tinggi, sisi;
+    persegi(&area, &perimeter, &sisi);
+    printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
+    double tinggiSisi=findSqrt(tinggi*tinggi+sisi*sisi);
+    double luasSisi=1/2*tinggiSisi*sisi;
+    *volume=1/3*area*tinggi;
+    *surface=area+3*luasSisi;
+}
+
+double kerucut(double* volume, double* surface){
+
+}
+
+void limas(){
+    printf("Pilih limas: (ketik pililhan)\n");
+    printf("1. Segitiga\n");
+    printf("2. Persegi\n");
+    printf("3. Kerucut\n");
+    printf("0. Kembali ke menu sebelumnya\n");
+    int selection;
+    scanf("%d", &selection);
+    double volume, surface;
+    switch (selection)
+    {
+    case 1:
+        limas_segitiga(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 2:
+        limas_persegi(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 3:
+        kerucut(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 0:
+        bidangtiga();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi\n");
+        limas();
+        break;
+    }
 }
 
 void bidangtiga(){

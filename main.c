@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _USE_MATH_DEFINES
-#include <math.h>
+#define M_PI 3.142857
 #include <fenv.h>
 
 int main_process();
@@ -637,7 +636,8 @@ void convCalc(){
             break;
         case '%':
             printf("Input value: \n");scanf("%lf",&val2);
-            result=fmod(result, val2);
+            int hasil=(int)val1%(int)val2;
+            result = (double)hasil;
             break;
         case '=':
             printf("%g\n", result);

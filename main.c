@@ -6,6 +6,8 @@
 
 int main_process();
 
+void bidangtiga();
+void bidangdua();
 // void gonext(){
 //     int choice;
 //     printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
@@ -26,17 +28,16 @@ int main_process();
 
 double findSqrt(double x)
 {
-    if (x < 2)
-        return x;
- 
-    double y = x;
-    double z = (y + (x / y)) / 2;
- 
-    while (abs(y - z) >= 0.00001) {
-        y = z;
-        z = (y + (x / y)) / 2;
+    double sqrt, temp;
+    sqrt = x / 2;
+    temp = 0;
+
+    while(sqrt != temp){
+
+        temp = sqrt;
+        sqrt = (x/temp + temp) / 2;
     }
-    return z;
+    return sqrt;
 }
 
 int factorial(int n){
@@ -47,6 +48,14 @@ int factorial(int n){
     }
     return factorial;
 }
+
+int power(int a, int b){  
+    int power = 1, i ;  
+    for(i = 1 ;i <= b; ++i ){  
+        power = power * a ;  
+    }  
+    return power;  
+}  
 
 void permutation(){
     int n, r;
@@ -126,30 +135,29 @@ double persegi_panjang(double* area, double* perimeter){
     *perimeter = 2*(p+l);
 }
 
-double lingkaran(double* area, double* perimeter){
+double lingkaran(double* area, double* perimeter, double*radius){
     double r;
     printf("Masukkan radius lingkaran: ");scanf("%lf", &r);
     *area = M_PI*r*r;
     *perimeter = M_PI*2*r;
+    *radius =r;
 }
 
-double segitiga(double* area, double* perimeter, double* alas){
-    double a, s1, s2, t;
-    printf("Masukkan panjang alas segitiga          : ");scanf("%lf", &a);
-    printf("Masukkan tinggi segitiga                : ");scanf("%lf", &t);
-    printf("Masukkan panjang sisi pertama segitiga  : ");scanf("%lf", &s1);
-    printf("Masukkan panjang sisi kedua segitiga    : ");scanf("%lf", &s2);
+double segitiga(double* area, double* perimeter, double* alas, double* tinggi){
+    double a, t;
+    printf("Masukkan panjang sisi segitiga: ");scanf("%lf", &a);
+    printf("Masukkan tinggi segitiga: ");scanf("%lf", &t);
     *area = (a*t)/2;
-    *perimeter = a+s1+s2;
+    *perimeter = a*3;
     *alas = a;
 }
 
 double trapezium(double* area, double* perimeter){
     double alas, t, tutup, sisi;
-    printf("Masukkan panjang alas trapezium         : ");scanf("%lf", &alas);
-    printf("Masukkan panjang tutup trapezium        : ");scanf("%lf", &tutup);
-    printf("Masukkan tinggi trapezium               : ");scanf("%lf", &t);
-    printf("Masukkan panjang sisi trapezium         : ");scanf("%lf", &sisi);
+    printf("Masukkan panjang alas trapezium: ");scanf("%lf", &alas);
+    printf("Masukkan panjang tutup trapezium: ");scanf("%lf", &tutup);
+    printf("Masukkan tinggi trapezium: ");scanf("%lf", &t);
+    printf("Masukkan panjang sisi trapezium: ");scanf("%lf", &sisi);
     *area = ((alas+tutup)/2)*t;
     *perimeter = alas+2*sisi+tutup;
 }
@@ -161,7 +169,7 @@ void bidangdua(){
     printf("1. Persegi\n");
     printf("2. Persegi Panjang\n");
     printf("3. Lingkaran\n");
-    printf("4. Segitiga\n");
+    printf("4. Segitiga (Sama Sisi)\n");
     printf("5. Trapezium\n");
     printf("0. Kembali ke menu utama\n");
     scanf("%d", &selection);
@@ -169,7 +177,8 @@ void bidangdua(){
     switch (selection)
     {
     case 1:
-        persegi(&area, &perimeter, NULL);
+        double nullsisi;
+        persegi(&area, &perimeter, &nullsisi);
         printf("Luas Persegi: %g\nKeliling Persegi: %g\n", area, perimeter);
         break;
     case 2:
@@ -177,11 +186,13 @@ void bidangdua(){
         printf("Luas Persegi Panjang: %g\nKeliling Persegi Panjang: %g\n", area, perimeter);
         break;
     case 3:
-        lingkaran(&area, &perimeter);
+        double nullradius;
+        lingkaran(&area, &perimeter, &nullradius);
         printf("Luas Lingkaran: %g\nKeliling Lingkaran: %g\n", area, perimeter);
         break;
     case 4:
-        segitiga(&area, &perimeter, NULL);
+        double nullalas, nulltinggi;
+        segitiga(&area, &perimeter, &nullalas, &nulltinggi);
         printf("Luas Segitiga: %g\nKeliling Segitiga: %g\n", area, perimeter);
         break;
     case 5:
@@ -207,7 +218,7 @@ void bidangdua(){
         main_process();
         break;
     default:
-        printf("Input invalid, kembali ke menu utama.");
+        printf("Input invalid, kembali ke menu utama.\n");
         main_process();
         break;
     };
@@ -232,28 +243,28 @@ double balok(double* volume, double* surface){
 double bola(double* volume, double* surface){
     double r;
     printf("Masukkan radius bola: ");scanf("%lf", &r);
-    *volume = (4/3)*M_PI*r*r*r;
+    *volume = 1.33*M_PI*r*r*r;
     *surface = 4*M_PI*r*r;
 }
 
 double prisma_segitiga(double* volume, double* surface){
-    double area, perimeter, tinggi;
-    segitiga(&area, &perimeter, NULL);
+    double area, perimeter, tinggi, nullalas, nulltinggi;
+    segitiga(&area, &perimeter, &nullalas, &nulltinggi);
     printf("Masukkan tinggi prisma: ");scanf("%lf", &tinggi);
     *volume = area*tinggi;
     *surface = perimeter*tinggi + 2*area;
 }
 
 double tabung(double* volume, double* surface){
-    double area, perimeter, tinggi;
-    lingkaran(&area, &perimeter);
+    double area, perimeter, tinggi, nullradius;
+    lingkaran(&area, &perimeter, &nullradius);
     printf("Masukkan tinggi tabung: ");scanf("%lf", &tinggi);
     *volume = area*tinggi;
     *surface = perimeter*tinggi + 2*area;
 }
 
 void prisma(){
-    printf("Pilih prisma: (ketik pililhan)\n");
+    printf("Pilih prisma: (ketik pilihan)\n");
     printf("1. Segitiga\n");
     printf("2. Tabung\n");
     printf("0. Kembali ke menu sebelumnya\n");
@@ -296,26 +307,30 @@ void prisma(){
 }
 
 double limas_segitiga(double* volume, double* surface){
-    double area, perimeter, tinggi, tinggisisi, sisi;
-    segitiga(&area, &perimeter, &sisi);
+    double area, perimeter, tinggi, tinggisisi, sisi, tinggisegitiga;
+    segitiga(&area, &perimeter, &sisi, &tinggisegitiga);
     printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
-    printf("Masukkan tinggi sisi  : ");scanf("%lf", &tinggisisi);
-    *volume = 1/3*area*tinggi;
-    *surface = area + 3*(1/2*sisi*tinggisisi);
+    tinggisisi=findSqrt(0.25*(sisi*sisi)+(tinggisegitiga*tinggisegitiga));
+    *volume = 0.33*area*tinggi;
+    *surface = area + 3*(0.5*sisi*tinggisisi);
 }
 
 double limas_persegi(double* volume, double* surface){
     double area, perimeter, tinggi, sisi;
     persegi(&area, &perimeter, &sisi);
     printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
-    double tinggiSisi=findSqrt(tinggi*tinggi+sisi*sisi);
-    double luasSisi=1/2*tinggiSisi*sisi;
-    *volume=1/3*area*tinggi;
-    *surface=area+3*luasSisi;
+    double tinggiSisi=findSqrt(tinggi*tinggi+(0.5*sisi)*(0.5*sisi));
+    double luasSisi=0.5*tinggiSisi*sisi;
+    *volume=0.33*area*tinggi;
+    *surface=area+4*luasSisi;
 }
 
 double kerucut(double* volume, double* surface){
-
+    double area, perimeter, tinggi, radius;
+    lingkaran(&area, &perimeter, &radius);
+    printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
+    *volume = tinggi/3*area;
+    *surface = M_PI*radius*(radius+findSqrt(tinggi*tinggi+radius*radius));
 }
 
 void limas(){
@@ -353,34 +368,202 @@ void limas(){
 
 void bidangtiga(){
 //kubus, balok, bola, prisma&tabung, limas, 
+    int selection;
+    printf("Pilih bidang ruang: (Masukkan angka depan pilihan)\n");
+    printf("1. Kubus\n");
+    printf("2. Balok\n");
+    printf("3. Bola\n");
+    printf("4. Prisma\n");
+    printf("5. Limas\n");
+    printf("0. Kembali ke menu utama\n");
+    scanf("%d", &selection);
+    double volume, surface;
+    switch (selection)
+    {
+    case 1:
+        kubus(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 2:
+        balok(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 3:
+        bola(&volume, &surface);
+        printf("Volume: %g\nLuas Permukaan: %g\n",volume, surface);
+        break;
+    case 4:
+        prisma();
+        break;
+    case 5:
+        limas();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi.\n");
+        bidangtiga();
+        break;
+    }
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        bidangtiga();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
 }
 
-void trigonometric(){
-//sin cos tan csc sec cot
-}
+void teori_angka();
 
 void gcd(){
-//greatest common divisor, ambil dari matdis
+    int a, b, r;
+    printf("Input integer pertama   : ");scanf("%d", &a);
+    printf("Input integer kedua     : ");scanf("%d", &b);
+    int a_awal = a;
+    int b_awal = b;
+    if (a<b)
+    {
+        int temp=b;
+        b=a;
+        a=temp;
+    } 
+    while (b!=0)
+    {
+        r=a%b;
+        a=b;
+        b=r;
+    }
+    printf("FPB dari %d dan %d adalah %d\n", a_awal, b_awal, a);
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        gcd();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
 }
 
 void lcm(){
-//least common multiple, ambil dari matdis
-}
+    int a, x, y;
+    printf("Input integer pertama   : ");scanf("%d", &x);
+    printf("Input integer kedua     : ");scanf("%d", &y);
+    a= (x > y) ? x : y;
 
-void statistics(){
-//average, modus, median, min max, langsung satu input satu output aja
+    while (1) {
+        if ((a % x == 0) && (a % y == 0)) {
+            printf("KPK dari %d dan %d adalah %d.\n", x, y, a);
+            break;
+        }
+        ++a;
+    }
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        lcm();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
 }
 
 void exponents(){
-//pangkat, akar, logaritma
-}
-
-void converter(){
-//temperatur, jarak (imperial to metric vice versa), binary, octal, decimal, hexadecimal
+//pangkat, akar kuadrat
+    printf("Pilih:\n");
+    printf("1. Perpangkatan integer\n");
+    printf("2. Akar kuadrat\n");
+    printf("0. Kembali ke menu sebelumnya\n");
+    int selection;
+    scanf("%d", &selection);
+    switch (selection)
+    {
+    case 1:
+        int a, b;
+        printf("Masukkan bilangan utama: ");scanf("%d", &a);
+        printf("Masukkan pangkat: ");scanf("%d", &b);
+        printf("%d pangkat %d: %d", a, b, power(a, b));
+        break;
+    case 2:
+        double x;
+        printf("Masukkan bilangan yang akan diakar: ");scanf("%lf", &x);
+        printf("Akar kuadrat %g: %g\n", x, findSqrt(x));
+        break;
+    case 0:
+        teori_angka();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi\n");
+        exponents();
+        break;
+    }
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        exponents();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
 }
 
 void teori_angka(){
-
+    int selection;
+    printf("Pilih opsi: (Masukkan angka depan pilihan)\n");
+    printf("1. FPB\n");
+    printf("2. KPK\n");
+    printf("3. Eksponen\n");
+    printf("0. Kembali ke menu utama\n");
+    scanf("%d", &selection);
+    switch (selection)
+    {
+    case 1:
+        gcd();
+        break;
+    case 2:
+        lcm();
+        break;
+    case 3:
+        exponents();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi.\n");
+        teori_angka();
+        break;
+    }
 }
 
 void permutasi_kombinasi(){
@@ -498,7 +681,7 @@ void factorialCalc(){
         main_process();
         break;
     default:
-        printf("Input invalid, kembali ke menu utama.");
+        printf("Input invalid, kembali ke menu utama.\n");
         main_process();
         break;
     };
@@ -533,7 +716,134 @@ void fibonacciCalc(){
         main_process();
         break;
     default:
-        printf("Input invalid, kembali ke menu utama.");
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
+}
+
+void deretbaris();
+
+void barisAritmatika(){
+    printf("Mencari suku ke-n baris Aritmatika\n");
+    double a, n, b;
+    printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
+    printf("Masukkan banyak suku (n): ");scanf("%lf", &n);
+    printf("Masukkan selisih antar suku (b): ");scanf("%lf", &b);
+    double un = (a+(n-1)*b);
+    printf("Suku ke-%g: %g\n", n, un);
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        barisAritmatika();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
+}
+
+void barisGeometri(){
+    printf("Mencari suku ke-n baris geometri\n");
+    double a, n, r;
+    printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
+    printf("Masukkan banyak suku (n): ");scanf("%lf", &n);
+    printf("Masukkan rasio (r): ");scanf("%lf", &r);
+    double un = a * (power(r, n-1));
+    printf("Suku ke-%g: %g\n", n, un);
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        barisGeometri();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
+}
+
+void barisCalc(){
+    printf("Pilih:\n");
+    printf("1. Baris Aritmatika\n");
+    printf("2. Baris Geometri\n");
+    printf("0. Kembali ke menu sebelumnya\n");
+    int selection;
+    scanf("%d", &selection);
+    switch (selection)
+    {
+    case 1:
+        barisAritmatika();
+        break;
+    case 2:
+        barisGeometri();
+        break;
+    case 0:
+        deretbaris();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi\n");
+        barisCalc();
+        break;
+    }
+}
+
+void deretAritmatika(){
+    printf("Mencari jumlah n suku pertama deret aritmatika\n");
+    double a, n, b;
+    printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
+    printf("Masukkan banyak suku (n): ");scanf("%lf", &n);
+    printf("Masukkan selisih antar suku (b): ");scanf("%lf", &b);
+    double sn = (n*(2*a+(n-1)*b))/2;
+    printf("Jumlah %g suku pertama: %g\n", n, sn);
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        deretAritmatika();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
+        main_process();
+        break;
+    };
+}
+
+void deretGeometri(){
+    printf("Mencari jumlah n suku pertama deret geometri\n");
+    double a, n, r;
+    printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
+    printf("Masukkan banyak suku (n): ");scanf("%lf", &n);
+    printf("Masukkan rasio (r): ");scanf("%lf", &r);
+    double sn = (a*(1-power(r, n)))/(1-r);
+    printf("Jumlah %g suku pertama: %g\n", n, sn);
+    int choice;
+    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        deretGeometri();
+        break;
+    case 0:
+        main_process();
+        break;
+    default:
+        printf("Input invalid, kembali ke menu utama.\n");
         main_process();
         break;
     };
@@ -541,26 +851,53 @@ void fibonacciCalc(){
 
 void deretCalc(){
     printf("Work In Progress\n");
-    int choice;
-    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
-    switch (choice)
+    printf("Pilih:\n");
+    printf("1. Deret Aritmatika\n");
+    printf("2. Deret Geometri\n");
+    printf("0. Kembali ke menu sebelumnya\n");
+    int selection;
+    scanf("%d", &selection);
+    switch (selection)
     {
     case 1:
+        deretAritmatika();
+        break;
+    case 2:
+        deretGeometri();
+        break;
+    case 0:
+        deretbaris();
+        break;
+    default:
+        printf("Input invalid, silahkan coba lagi\n");
+        deretCalc();
+        break;
+    }
+}
+
+void deretbaris(){
+    printf("Pilih:\n");
+    printf("1. Baris\n");
+    printf("2. Deret\n");
+    printf("0. Kembali ke menu sebelumnya\n");
+    int selection;
+    scanf("%d", &selection);
+    switch (selection)
+    {
+    case 1:
+        barisCalc();
+        break;
+    case 2:
         deretCalc();
         break;
     case 0:
         main_process();
         break;
     default:
-        printf("Input invalid, kembali ke menu utama.");
-        main_process();
+        printf("Input invalid, silahkan coba lagi\n");
+        deretbaris();
         break;
-    };
-}
-
-void printHelp(){
-    printf("Help\n");
-    main_process();
+    }
 }
 
 int main_process(){
@@ -571,11 +908,11 @@ int main_process(){
     printf("Pilih Salah Satu Opsi Berikut: (Ketikkan Angka Depan Opsi)\n");
     printf("1. Kalkulator Konvensional (Tambah Kurang Kali Bagi Modulus)\n");
     printf("2. Faktorial (Input 1 angka untuk mendapatkan faktorialnya.)\n");
-    printf("3. Kalkulator deret aritmatika/geometri.\n");
+    printf("3. Kalkulator baris/deret aritmatika/geometri.\n");
     printf("4. Print angka fibonacci ke-n\n");
     printf("5. Bidang Dua\n");
     printf("6. Bidang Tiga\n");
-    printf("7. Teori Angka (FPB, KPK, Converter)\n");
+    printf("7. Teori Angka (FPB, KPK, Pangkat)\n");
     printf("8. Permutasi dan Kombinasi\n");
     printf("9. Help\n");
     printf("0. Exit\n");
@@ -592,7 +929,7 @@ int main_process(){
         factorialCalc();
         break;
     case 3:
-        deretCalc();
+        deretbaris();
         break;
     case 4:
         fibonacciCalc();
@@ -608,9 +945,6 @@ int main_process(){
         break;
     case 8:
         permutasi_kombinasi();
-        break;
-    case 9:
-        printHelp();
         break;
     case 0:
         exit(0);

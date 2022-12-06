@@ -5,6 +5,1806 @@
 
 int main_process();
 
+void merah_background_item()
+{
+    printf("\033[38;5;196;48;5;232m");
+}
+
+void hijau_background_item()
+{
+    printf("\033[38;5;46;48;5;232m");
+}
+
+void kuning_background_item()
+{
+    printf("\033[38;5;226;48;5;232m");
+}
+
+void biru_background_item()
+{
+    printf("\033[38;5;27;48;5;232m");
+}
+
+void ungu_background_item()
+{
+    printf("\033[38;5;129;48;5;232m");
+}
+
+void oren_background_item()
+{
+    printf("\033[38;5;208;48;5;232m");
+}
+
+void biru()
+{
+    printf("\033[38;5;81m");
+}
+
+void oren()
+{
+    printf("\033[38;5;208m");
+}
+
+void merah()
+{
+    printf("\033[38;5;196m");
+}
+
+void putih()
+{
+    printf("\033[38;5;231m");
+}
+
+void gradasi_warna_1_1()
+{
+    printf("\033[38;5;196;48;5;232m");
+}
+
+void gradasi_warna_1_2()
+{
+    printf("\033[38;5;197;48;5;232m");
+}
+
+void gradasi_warna_1_3()
+{
+    printf("\033[38;5;198;48;5;232m");
+}
+
+void gradasi_warna_1_4()
+{
+    printf("\033[38;5;199;48;5;232m");
+}
+
+void gradasi_warna_1_5()
+{
+    printf("\033[38;5;200;48;5;232m");
+}
+
+void gradasi_warna_1_6()
+{
+    printf("\033[38;5;201;48;5;232m");
+}
+
+void gradasi_warna_2_1()
+{
+    printf("\033[38;5;172;48;5;232m");
+}
+
+void gradasi_warna_2_2()
+{
+    printf("\033[38;5;173;48;5;232m");
+}
+
+void gradasi_warna_2_3()
+{
+    printf("\033[38;5;174;48;5;232m");
+}
+
+void gradasi_warna_2_4()
+{
+    printf("\033[38;5;175;48;5;232m");
+}
+
+void gradasi_warna_2_5()
+{
+    printf("\033[38;5;176;48;5;232m");
+}
+
+void gradasi_warna_2_6()
+{
+    printf("\033[38;5;177;48;5;232m");
+}
+
+void gradasi_warna_3_1()
+{
+    printf("\033[38;5;82;48;5;232m");
+}
+
+void gradasi_warna_3_2()
+{
+    printf("\033[38;5;83;48;5;232m");
+}
+
+void gradasi_warna_3_3()
+{
+    printf("\033[38;5;84;48;5;232m");
+}
+
+void gradasi_warna_3_4()
+{
+    printf("\033[38;5;85;48;5;232m");
+}
+
+void gradasi_warna_3_5()
+{
+    printf("\033[38;5;86;48;5;232m");
+}
+
+void gradasi_warna_3_6()
+{
+    printf("\033[38;5;87;48;5;232m");
+}
+
+void gradasi_warna_4_1()
+{
+    printf("\033[38;5;208;48;5;232m");
+}
+
+void gradasi_warna_4_2()
+{
+    printf("\033[38;5;209;48;5;232m");
+}
+
+void gradasi_warna_4_3()
+{
+    printf("\033[38;5;210;48;5;232m");
+}
+
+void gradasi_warna_4_4()
+{
+    printf("\033[38;5;211;48;5;232m");
+}
+
+void gradasi_warna_4_5()
+{
+    printf("\033[38;5;212;48;5;232m");
+}
+
+void gradasi_warna_4_6()
+{
+    printf("\033[38;5;213;48;5;232m");
+}
+
+void gradasi_warna_5_1()
+{
+    printf("\033[38;5;136;48;5;232m");
+}
+
+void gradasi_warna_5_2()
+{
+    printf("\033[38;5;137;48;5;232m");
+}
+
+void gradasi_warna_5_3()
+{
+    printf("\033[38;5;138;48;5;232m");
+}
+
+void gradasi_warna_5_4()
+{
+    printf("\033[38;5;139;48;5;232m");
+}
+
+void gradasi_warna_5_5()
+{
+    printf("\033[38;5;140;48;5;232m");
+}
+
+void gradasi_warna_5_6()
+{
+    printf("\033[38;5;141;48;5;232m");
+}
+
+void gradasi_warna_6_1()
+{
+    printf("\033[38;5;226;48;5;232m");
+}
+
+void gradasi_warna_6_2()
+{
+    printf("\033[38;5;227;48;5;232m");
+}
+
+void gradasi_warna_6_3()
+{
+    printf("\033[38;5;228;48;5;232m");
+}
+
+void gradasi_warna_6_4()
+{
+    printf("\033[38;5;229;48;5;232m");
+}
+
+void gradasi_warna_6_5()
+{
+    printf("\033[38;5;230;48;5;232m");
+}
+
+void gradasi_warna_6_6()
+{
+    printf("\033[38;5;231;48;5;232m");
+}
+
+void reset()
+{
+    printf("\033[\e[0m");
+}
+
+void main_menu_design()
+{
+    system("cls");
+    putih();
+    printf("==========================================================================================================================================\n");
+    printf("||");
+    merah_background_item();
+    printf(" ___   _  _______  ___      ___   _  __   __  ___      _______  _______  _______  ______           ______   _______  _     _  _______ ");
+    reset();
+    putih();
+    printf("||\n");
+    printf("||");
+    merah_background_item();
+    printf("|   | | ||   _   ||   |    |   | | ||  | |  ||   |    |   _   ||       ||       ||    _ |         |      | |       || | _ | ||   _   |");
+    reset();
+    putih();
+    printf("||\n");
+    printf("||");
+    oren_background_item();
+    printf("|   |_| ||  |_|  ||   |    |   |_| ||  | |  ||   |    |  |_|  ||_     _||   _   ||   | ||         |  _    ||    ___|| || || ||  |_|  |");
+    reset();
+    putih();
+    printf("||\n");
+    printf("||");
+    kuning_background_item();
+    printf("|      _||       ||   |    |      _||  |_|  ||   |    |       |  |   |  |  | |  ||   |_||_        | | |   ||   |___ |       ||       |");
+    reset();
+    putih();
+    printf("||\n");
+    printf("||");
+    hijau_background_item();
+    printf("|     |_ |       ||   |___ |     |_ |       ||   |___ |       |  |   |  |  |_|  ||    __  |       | |_|   ||    ___||       ||       |");
+    reset();
+    putih();
+    printf("||\n");
+    printf("||");
+    biru_background_item();
+    printf("|    _  ||   _   ||       ||    _  ||       ||       ||   _   |  |   |  |       ||   |  | |       |       ||   |___ |   _   ||   _   |");
+    reset();
+    putih();
+    printf("||\n");
+    printf("||");
+    ungu_background_item();
+    printf("|___| |_||__| |__||_______||___| |_||_______||_______||__| |__|  |___|  |_______||___|  |_|       |______| |_______||__| |__||__| |__|");
+    reset();
+    putih();
+    printf("||\n");
+    printf("==========================================================================================================================================\n\n");
+    reset();
+    merah();
+    printf("===========================");
+    oren();
+    printf("Samuel Maximus Lamere");
+    biru();
+    printf("____Jawaban Yang Anda Cari Ada Disini____");
+    oren();
+    printf("Bonifasius Martin");
+    merah();
+    printf("================================\n\n");
+    putih();
+    printf("Pilih Salah Satu Opsi Berikut: ");
+    merah();
+    printf("(Ketikkan Angka Depan Opsi)\n");
+    putih();
+    printf("1. Kalkulator Konvensional");
+    merah();
+    printf("(Tambah Kurang Kali Bagi Modulus)\n");
+    putih();
+    printf("2. Faktorial ");
+    merah();
+    printf("(Input 1 angka untuk mendapatkan faktorialnya.)\n");
+    putih();
+    printf("3. Kalkulator deret aritmatika/geometri.\n");
+    printf("4. Print angka fibonacci ke-n\n");
+    printf("5. Bidang Dua\n");
+    printf("6. Bidang Tiga\n");
+    printf("7. Teori Angka ");
+    merah();
+    printf("(FPB, KPK, Converter)\n");
+    putih();
+    printf("8. Permutasi dan Kombinasi\n");
+    printf("0. Exit\n");
+    reset();
+}
+
+void kalkulator_konvensional_design()
+{
+    system("cls");
+    putih();
+    printf("=================================================================================================================\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf("        ___   _  _______  ___      ___   _  __   __  ___      _______  _______  _______  ______        ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf("       |   | | ||   _   ||   |    |   | | ||  | |  ||   |    |   _   ||       ||       ||    _ |       ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_2();
+    printf("       |   |_| ||  |_|  ||   |    |   |_| ||  | |  ||   |    |  |_|  ||_     _||   _   ||   | ||       ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_3();
+    printf("       |      _||       ||   |    |      _||  |_|  ||   |    |       |  |   |  |  | |  ||   |_||_      ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_4();
+    printf("       |     |_ |       ||   |___ |     |_ |       ||   |___ |       |  |   |  |  |_|  ||    __  |     ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_5();
+    printf("       |    _  ||   _   ||       ||    _  ||       ||       ||   _   |  |   |  |       ||   |  | |     ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf("       |___| |_||__| |__||_______||___| |_||_______||_______||__| |__|  |___|  |_______||___|  |_|     ");
+    putih();
+    printf("      ||\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf("   ___   _  _______  __    _  __   __  _______  __    _  _______  ___   _______  __    _  _______  ___     ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf("  |   | | ||       ||  |  | ||  | |  ||       ||  |  | ||       ||   | |       ||  |  | ||   _   ||   |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_5();
+    printf("  |   |_| ||   _   ||   |_| ||  |_|  ||    ___||   |_| ||  _____||   | |   _   ||   |_| ||  |_|  ||   |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_4();
+    printf("  |      _||  | |  ||       ||       ||   |___ |       || |_____ |   | |  | |  ||       ||       ||   |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_3();
+    printf("  |     |_ |  |_|  ||  _    ||       ||    ___||  _    ||_____  ||   | |  |_|  ||  _    ||       ||   |___ ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_2();
+    printf("  |    _  ||       || | |   | |     | |   |___ | | |   | _____| ||   | |       || | |   ||   _   ||       |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf("  |___| |_||_______||_|  |__|  |___|  |_______||_|  |__||_______||___| |_______||_|  |__||__| |__||_______|");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                                                             ||\n");
+    printf("=================================================================================================================\n");
+    reset();
+}
+
+void pangkat_design()
+{
+    system("cls");
+    putih();
+    printf("==========================================================================\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("  _______  _______  __    _  _______  ___   _  _______  _______    ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf(" |       ||   _   ||  |  | ||       ||   | | ||   _   ||       |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf(" |    _  ||  |_|  ||   |_| ||    ___||   |_| ||  |_|  ||_     _|    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf(" |   |_| ||       ||       ||   | __ |      _||       |  |   |      ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf(" |    ___||       ||  _    ||   ||  ||     |_ |       |  |   |      ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf(" |   |    |   _   || | |   ||   |_| ||    _  ||   _   |  |   |      ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf(" |___|    |__| |__||_|  |__||_______||___| |_||__| |__|  |___|      ");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                      ||\n");
+    printf("==========================================================================\n");
+    reset();
+}
+
+void faktorial_design()
+{
+    system("cls");
+    putih();
+    printf("=======================================================================================\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf("   _______  _______  ___   _  _______  _______  ______    ___   _______  ___    ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf("  |       ||   _   ||   | | ||       ||       ||    _ |  |   | |   _   ||   |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_2();
+    printf("  |    ___||  |_|  ||   |_| ||_     _||   _   ||   | ||  |   | |  |_|  ||   |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_3();
+    printf("  |   |___ |       ||      _|  |   |  |  | |  ||   |_||_ |   | |       ||   |    ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_4();
+    printf("  |    ___||       ||     |_   |   |  |  |_|  ||    __  ||   | |       ||   |___ ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_5();
+    printf("  |   |    |   _   ||    _  |  |   |  |       ||   |  | ||   | |   _   ||       |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_6();
+    printf("  |___|    |__| |__||___| |_|  |___|  |_______||___|  |_||___| |__| |__||_______|");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                                   ||\n");
+    printf("=======================================================================================\n");
+    reset();
+}
+
+void fibonacci_design()
+{
+    system("cls");
+    putih();
+    printf("=================================================================================\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("   _______  ___   _______  _______  __    _  _______  _______  _______  ___ ");
+    putih();
+    printf(" ||\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("  |       ||   | |  _    ||       ||  |  | ||   _   ||       ||       ||   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_2();
+    printf("  |    ___||   | | |_|   ||   _   ||   |_| ||  |_|  ||      _||      _||   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_3();
+    printf("  |   |___ |   | |       ||  | |  ||       ||       ||     |  |     |  |   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_4();
+    printf("  |    ___||   | |  _   | |  |_|  ||  _    ||       ||     |  |     |  |   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_5();
+    printf("  |   |    |   | | |_|   ||       || | |   ||   _   ||     |_ |     |_ |   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf("  |___|    |___| |_______||_______||_|  |__||__| |__||_______||_______||___| ");
+    putih();
+    printf("||\n");
+    printf("||                                                                             ||\n");
+    printf("=================================================================================\n");
+    reset();
+}
+
+void bidang_dua_design()
+{
+    system("cls");
+    putih();
+    printf("==========================================================================================\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf("   _______  ___   ______   _______  __    _  _______      ______   __   __  _______  ");
+    putih();
+    printf(" ||\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf("  |  _    ||   | |      | |   _   ||  |  | ||       |    |      | |  | |  ||   _   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_2();
+    printf("  | |_|   ||   | |  _    ||  |_|  ||   |_| ||    ___|    |  _    ||  | |  ||  |_|  |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_3();
+    printf("  |       ||   | | | |   ||       ||       ||   | __     | | |   ||  |_|  ||       |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_4();
+    printf("  |  _   | |   | | |_|   ||       ||  _    ||   ||  |    | |_|   ||       ||       |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_5();
+    printf("  | |_|   ||   | |       ||   _   || | |   ||   |_| |    |       ||       ||   _   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_6();
+    printf("  |_______||___| |______| |__| |__||_|  |__||_______|    |______| |_______||__| |__|  ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                      ||\n");
+    printf("==========================================================================================\n");
+    reset();
+}
+
+void persegi_design()
+{
+    system("cls");
+    putih();
+    printf("=====================================================================\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf("  _______  _______  ______    _______  _______  _______  ___  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf(" |       ||       ||    _ |  |       ||       ||       ||   |  ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_2();
+    printf(" |    _  ||    ___||   | ||  |  _____||    ___||    ___||   |  ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_3();
+    printf(" |   |_| ||   |___ |   |_||_ | |_____ |   |___ |   | __ |   |  ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_4();
+    printf(" |    ___||    ___||    __  ||_____  ||    ___||   ||  ||   |  ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_5();
+    printf(" |   |    |   |___ |   |  | | _____| ||   |___ |   |_| ||   |  ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf(" |___|    |_______||___|  |_||_______||_______||_______||___|  ");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                 ||\n");
+    printf("=====================================================================\n");
+    reset();
+}
+
+void persegi_panjang_design()
+{
+    system("cls");
+    putih();
+    printf("=====================================================================================================================================\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf("  _______  _______  ______    _______  _______  _______  ___     _______  _______  __    _      ___  _______  __    _  _______");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf(" |       ||       ||    _ |  |       ||       ||       ||   |   |       ||   _   ||  |  | |    |   ||   _   ||  |  | ||       |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_2();
+    printf(" |    _  ||    ___||   | ||  |  _____||    ___||    ___||   |   |    _  ||  |_|  ||   |_| |    |   ||  |_|  ||   |_| ||    ___|");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_3();
+    printf(" |   |_| ||   |___ |   |_||_ | |_____ |   |___ |   | __ |   |   |   |_| ||       ||       |    |   ||       ||       ||   | __ ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_4();
+    printf(" |    ___||    ___||    __  ||_____  ||    ___||   ||  ||   |   |    ___||       ||  _    | ___|   ||       ||  _    ||   ||  |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_5();
+    printf(" |   |    |   |___ |   |  | | _____| ||   |___ |   |_| ||   |   |   |    |   _   || | |   ||       ||   _   || | |   ||   |_| |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_6();
+    printf(" |___|    |_______||___|  |_||_______||_______||_______||___|   |___|    |__| |__||_|  |__||_______||__| |__||_|  |__||_______|");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                                                                                 ||\n");
+    printf("=====================================================================================================================================\n");
+    reset();
+}
+
+void lingkaran_design()
+{
+    system("cls");
+    putih();
+    printf("=======================================================================================\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf("  ___      ___   __    _  _______  ___   _  _______  ______    _______  __    _ ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf(" |   |    |   | |  |  | ||       ||   | | ||   _   ||    _ |  |   _   ||  |  | | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_2();
+    printf(" |   |    |   | |   |_| ||    ___||   |_| ||  |_|  ||   | ||  |  |_|  ||   |_| | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_3();
+    printf(" |   |    |   | |       ||   | __ |      _||       ||   |_||_ |       ||       | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_4();
+    printf(" |   |___ |   | |  _    ||   ||  ||     |_ |       ||    __  ||       ||  _    | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_5();
+    printf(" |       ||   | | | |   ||   |_| ||    _  ||   _   ||   |  | ||   _   || | |   | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_2_6();
+    printf(" |_______||___| |_|  |__||_______||___| |_||__| |__||___|  |_||__| |__||_|  |__| ");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                                   ||\n");
+    printf("=======================================================================================\n");
+    reset();
+}
+
+void segitiga_design()
+{
+    system("cls");
+    putih();
+    printf("==========================================================================\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("  _______  _______  _______  ___   _______  ___   _______  _______ ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf(" |       ||       ||       ||   | |       ||   | |       ||   _   | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_3_2();
+    printf(" |  _____||    ___||    ___||   | |_     _||   | |    ___||  |_|  | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_3_3();
+    printf(" | |_____ |   |___ |   | __ |   |   |   |  |   | |   | __ |       | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_3_4();
+    printf(" |_____  ||    ___||   ||  ||   |   |   |  |   | |   ||  ||       | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_3_5();
+    printf("  _____| ||   |___ |   |_| ||   |   |   |  |   | |   |_| ||   _   | ");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf(" |_______||_______||_______||___|   |___|  |___| |_______||__| |__| ");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                      ||\n");
+    printf("==========================================================================\n");
+    reset();
+}
+
+void trapesium_design()
+{
+    system("cls");
+    putih();
+    printf("======================================================================================\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf("  _______  ______    _______  _______  _______  _______  ___   __   __  __   __");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf(" |       ||    _ |  |   _   ||       ||       ||       ||   | |  | |  ||  |_|  |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_4_2();
+    printf(" |_     _||   | ||  |  |_|  ||    _  ||    ___||  _____||   | |  | |  ||       |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_4_3();
+    printf("   |   |  |   |_||_ |       ||   |_| ||   |___ | |_____ |   | |  |_|  ||       |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_4_4();
+    printf("   |   |  |    __  ||       ||    ___||    ___||_____  ||   | |       ||       |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_4_5();
+    printf("   |   |  |   |  | ||   _   ||   |    |   |___  _____| ||   | |       || ||_|| |");
+    putih();
+    printf("  ||\n");
+    printf("||");
+    gradasi_warna_4_6();
+    printf("   |___|  |___|  |_||__| |__||___|    |_______||_______||___| |_______||_|   |_|");
+    putih();
+    printf("  ||\n");
+    printf("||                                                                                  ||\n");
+    printf("======================================================================================\n");
+    reset();
+}
+
+void bidang_tiga_design()
+{
+    system("cls");
+    putih();
+    printf("================================================================================================\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf("   _______  ___   ______   _______  __    _  _______      _______  ___   _______  _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf("  |  _    ||   | |      | |   _   ||  |  | ||       |    |       ||   | |       ||   _   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_2();
+    printf("  | |_|   ||   | |  _    ||  |_|  ||   |_| ||    ___|    |_     _||   | |    ___||  |_|  |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_3();
+    printf("  |       ||   | | | |   ||       ||       ||   | __       |   |  |   | |   | __ |       |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_4();
+    printf("  |  _   | |   | | |_|   ||       ||  _    ||   ||  |      |   |  |   | |   ||  ||       |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_5();
+    printf("  | |_|   ||   | |       ||   _   || | |   ||   |_| |      |   |  |   | |   |_| ||   _   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_6();
+    printf("  |_______||___| |______| |__| |__||_|  |__||_______|      |___|  |___| |_______||__| |__|  ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                            ||\n");
+    printf("================================================================================================\n");
+    reset();
+}
+
+void kubus_design()
+{
+    system("cls");
+    putih();
+    printf("===================================================\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf("  ___   _  __   __  _______  __   __  _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf(" |   | | ||  | |  ||  _    ||  | |  ||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_2();
+    printf(" |   |_| ||  | |  || |_|   ||  | |  ||  _____| ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_3();
+    printf(" |      _||  |_|  ||       ||  |_|  || |_____  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_4();
+    printf(" |     |_ |       ||  _   | |       ||_____  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_5();
+    printf(" |    _  ||       || |_|   ||       | _____| | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_6();
+    printf(" |___| |_||_______||_______||_______||_______| ");
+    putih();
+    printf("||\n");
+    printf("||                                               ||\n");
+    printf("===================================================\n");
+    reset();
+}
+
+void balok_design()
+{
+    system("cls");
+    putih();
+    printf("===================================================\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("  _______  _______  ___      _______  ___   _  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf(" |  _    ||   _   ||   |    |       ||   | | | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf(" | |_|   ||  |_|  ||   |    |   _   ||   |_| | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf(" |       ||       ||   |    |  | |  ||      _| ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf(" |  _   | |       ||   |___ |  |_|  ||     |_  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf(" | |_|   ||   _   ||       ||       ||    _  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf(" |_______||__| |__||_______||_______||___| |_| ");
+    putih();
+    printf("||\n");
+    printf("||                                               ||\n");
+    printf("===================================================\n");
+    reset();
+}
+
+void bola_design()
+{
+    system("cls");
+    putih();
+    printf("==========================================\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf("  _______  _______  ___      _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf(" |  _    ||       ||   |    |   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_1_2();
+    printf(" | |_|   ||   _   ||   |    |  |_|  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_1_3();
+    printf(" |       ||  | |  ||   |    |       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_1_4();
+    printf(" |  _   | |  |_|  ||   |___ |       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_1_5();
+    printf(" | |_|   ||       ||       ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf(" |_______||_______||_______||__| |__| ");
+    putih();
+    printf("||\n");
+    printf("||                                      ||\n");
+    printf("==========================================\n");
+    reset();
+}
+
+void prisma_segitiga_design()
+{
+    system("cls");
+    putih();
+    printf("================================================================================================================================\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf("  _______  ______    ___   _______  __   __  _______      _______  _______  _______  ___   _______  ___   _______  _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_2_1();
+    printf(" |       ||    _ |  |   | |       ||  |_|  ||   _   |    |       ||       ||       ||   | |       ||   | |       ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_2_2();
+    printf(" |    _  ||   | ||  |   | |  _____||       ||  |_|  |    |  _____||    ___||    ___||   | |_     _||   | |    ___||  |_|  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_2_3();
+    printf(" |   |_| ||   |_||_ |   | | |_____ |       ||       |    | |_____ |   |___ |   | __ |   |   |   |  |   | |   | __ |       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_2_4();
+    printf(" |    ___||    __  ||   | |_____  ||       ||       |    |_____  ||    ___||   ||  ||   |   |   |  |   | |   ||  ||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_2_5();
+    printf(" |   |    |   |  | ||   |  _____| || ||_|| ||   _   |     _____| ||   |___ |   |_| ||   |   |   |  |   | |   |_| ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_2_6();
+    printf(" |___|    |___|  |_||___| |_______||_|   |_||__| |__|    |_______||_______||_______||___|   |___|  |___| |_______||__| |__| ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                                                            ||\n");
+    printf("================================================================================================================================\n");
+    reset();
+}
+
+void tabung_design()
+{
+    system("cls");
+    putih();
+    printf("============================================================\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("  _______  _______  _______  __   __  __    _  _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf(" |       ||   _   ||  _    ||  | |  ||  |  | ||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_2();
+    printf(" |_     _||  |_|  || |_|   ||  | |  ||   |_| ||    ___| ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_3();
+    printf("   |   |  |       ||       ||  |_|  ||       ||   | __  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_4();
+    printf("   |   |  |       ||  _   | |       ||  _    ||   ||  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_5();
+    printf("   |   |  |   _   || |_|   ||       || | |   ||   |_| | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf("   |___|  |__| |__||_______||_______||_|  |__||_______| ");
+    putih();
+    printf("||\n");
+    printf("||                                                        ||\n");
+    printf("============================================================\n");
+    reset();
+}
+
+void limas_design()
+{
+    system("cls");
+    putih();
+    printf("================================================\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf("  ___      ___   __   __  _______  _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf(" |   |    |   | |  |_|  ||   _   ||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_2();
+    printf(" |   |    |   | |       ||  |_|  ||  _____| ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_3();
+    printf(" |   |    |   | |       ||       || |_____  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_4();
+    printf(" |   |___ |   | |       ||       ||_____  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_5();
+    printf(" |       ||   | | ||_|| ||   _   | _____| | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_6();
+    printf(" |_______||___| |_|   |_||__| |__||_______| ");
+    putih();
+    printf("||\n");
+    printf("||                                            ||\n");
+    printf("================================================\n");
+    reset();
+}
+
+void limas_segitiga_design()
+{
+    system("cls");
+    putih();
+    printf("======================================================================================================================\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf("   ___      ___   __   __  _______  _______      _______  _______  _______  ___   _______  ___   _______  _______ ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf(" |   |    |   | |  |_|  ||   _   ||       |    |       ||       ||       ||   | |       ||   | |       ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_2();
+    printf(" |   |    |   | |       ||  |_|  ||  _____|    |  _____||    ___||    ___||   | |_     _||   | |    ___||  |_|  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_3();
+    printf(" |   |    |   | |       ||       || |_____     | |_____ |   |___ |   | __ |   |   |   |  |   | |   | __ |       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_4();
+    printf(" |   |___ |   | |       ||       ||_____  |    |_____  ||    ___||   ||  ||   |   |   |  |   | |   ||  ||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_5();
+    printf(" |       ||   | | ||_|| ||   _   | _____| |     _____| ||   |___ |   |_| ||   |   |   |  |   | |   |_| ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_5_6();
+    printf(" |_______||___| |_|   |_||__| |__||_______|    |_______||_______||_______||___|   |___|  |___| |_______||__| |__| ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                                                  ||\n");
+    printf("======================================================================================================================\n");
+    reset();
+}
+
+void limas_persegi_design()
+{
+    system("cls");
+    putih();
+    printf("=================================================================================================================\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("  ___      ___   __   __  _______  _______      _______  _______  ______    _______  _______  _______  ___   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf(" |   |    |   | |  |_|  ||   _   ||       |    |       ||       ||    _ |  |       ||       ||       ||   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf(" |   |    |   | |       ||  |_|  ||  _____|    |    _  ||    ___||   | ||  |  _____||    ___||    ___||   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf(" |   |    |   | |       ||       || |_____     |   |_| ||   |___ |   |_||_ | |_____ |   |___ |   | __ |   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf(" |   |___ |   | |       ||       ||_____  |    |    ___||    ___||    __  ||_____  ||    ___||   ||  ||   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf(" |       ||   | | ||_|| ||   _   | _____| |    |   |    |   |___ |   |  | | _____| ||   |___ |   |_| ||   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf(" |_______||___| |_|   |_||__| |__||_______|    |___|    |_______||___|  |_||_______||_______||_______||___|  ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                                             ||\n");
+    printf("=================================================================================================================\n");
+    reset();
+}
+
+void limas_kerucut_design()
+{
+    system("cls");
+    putih();
+    printf("====================================================================================================================\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("  ___      ___   __   __  _______  _______      ___   _  _______  ______    __   __  _______  __   __  _______  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf(" |   |    |   | |  |_|  ||   _   ||       |    |   | | ||       ||    _ |  |  | |  ||       ||  | |  ||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf(" |   |    |   | |       ||  |_|  ||  _____|    |   |_| ||    ___||   | ||  |  | |  ||      _||  | |  ||_     _| ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf(" |   |    |   | |       ||       || |_____     |      _||   |___ |   |_||_ |  |_|  ||     |  |  |_|  |  |   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf(" |   |___ |   | |       ||       ||_____  |    |     |_ |    ___||    __  ||       ||     |  |       |  |   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf(" |       ||   | | ||_|| ||   _   | _____| |    |    _  ||   |___ |   |  | ||       ||     |_ |       |  |   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf(" |_______||___| |_|   |_||__| |__||_______|    |___| |_||_______||___|  |_||_______||_______||_______|  |___|   ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                                                ||\n");
+    printf("====================================================================================================================\n");
+    reset();
+}
+
+void aritmatika_dan_geometri_design()
+{
+    system("cls");
+    putih();
+    printf("================================================================================================\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("   _______  ______    ___   _______  __   __  _______  _______  ___   ___   _  _______   ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("  |   _   ||    _ |  |   | |       ||  |_|  ||   _   ||       ||   | |   | | ||   _   |  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf("  |  |_|  ||   | ||  |   | |_     _||       ||  |_|  ||_     _||   | |   |_| ||  |_|  |  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf("  |       ||   |_||_ |   |   |   |  |       ||       |  |   |  |   | |      _||       |  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf("  |       ||    __  ||   |   |   |  |       ||       |  |   |  |   | |     |_ |       |  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf("  |   _   ||   |  | ||   |   |   |  | ||_|| ||   _   |  |   |  |   | |    _  ||   _   |  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("  |__| |__||___|  |_||___|   |___|  |_|   |_||__| |__|  |___|  |___| |___| |_||__| |__|  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("                                ______   _______  __    _ ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("                               |      | |   _   ||  |  | |");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf("                               |  _    ||  |_|  ||   |_| |");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf("                               | | |   ||       ||       |");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf("                               | |_|   ||       ||  _    |");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf("                               |       ||   _   || | |   |");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("                               |______| |__| |__||_|  |__|");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("            _______  _______  _______  __   __  _______  _______  ______    ___  ");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("           |       ||       ||       ||  |_|  ||       ||       ||    _ |  |   | ");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf("           |    ___||    ___||   _   ||       ||    ___||_     _||   | ||  |   | ");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf("           |   | __ |   |___ |  | |  ||       ||   |___   |   |  |   |_||_ |   | ");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf("           |   ||  ||    ___||  |_|  ||       ||    ___|  |   |  |    __  ||   | ");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf("           |   |_| ||   |___ |       || ||_|| ||   |___   |   |  |   |  | ||   | ");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("           |_______||_______||_______||_|   |_||_______|  |___|  |___|  |_||___| ");
+    putih();
+    printf("           ||\n");
+    printf("||                                                                                            ||\n");
+    printf("================================================================================================\n");
+    reset();
+}
+
+void aritmatika_design()
+{
+    system("cls");
+    putih();
+    printf("===========================================================================================\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("  _______  ______    ___   _______  __   __  _______  _______  ___   ___   _  _______ ");
+    putih();
+    printf(" ||\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf(" |   _   ||    _ |  |   | |       ||  |_|  ||   _   ||       ||   | |   | | ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_2();
+    printf(" |  |_|  ||   | ||  |   | |_     _||       ||  |_|  ||_     _||   | |   |_| ||  |_|  | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_3();
+    printf(" |       ||   |_||_ |   |   |   |  |       ||       |  |   |  |   | |      _||       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_4();
+    printf(" |       ||    __  ||   |   |   |  |       ||       |  |   |  |   | |     |_ |       | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_5();
+    printf(" |   _   ||   |  | ||   |   |   |  | ||_|| ||   _   |  |   |  |   | |    _  ||   _   | ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf(" |__| |__||___|  |_||___|   |___|  |_|   |_||__| |__|  |___|  |___| |___| |_||__| |__| ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                       ||\n");
+    printf("===========================================================================================\n");
+    reset();
+}
+
+void geometri_design()
+{
+    system("cls");
+    putih();
+    printf("============================================================================\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf("  _______  _______  _______  __   __  _______  _______  ______    ___  ");
+    putih();
+    printf(" ||\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf(" |       ||       ||       ||  |_|  ||       ||       ||    _ |  |   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_2();
+    printf(" |    ___||    ___||   _   ||       ||    ___||_     _||   | ||  |   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_3();
+    printf(" |   | __ |   |___ |  | |  ||       ||   |___   |   |  |   |_||_ |   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_4();
+    printf(" |   ||  ||    ___||  |_|  ||       ||    ___|  |   |  |    __  ||   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_5();
+    printf(" |   |_| ||   |___ |       || ||_|| ||   |___   |   |  |   |  | ||   |  ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_6();
+    printf(" |_______||_______||_______||_|   |_||_______|  |___|  |___|  |_||___|  ");
+    putih();
+    printf("||\n");
+    printf("||                                                                        ||\n");
+    printf("============================================================================\n");
+    reset();
+}
+
+void teori_angka_design()
+{
+    system("cls");
+    putih();
+    printf("====================================================================================================\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("    _______  _______  _______  ______    ___     _______  __    _  _______  ___   _  _______ ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf("   |       ||       ||       ||    _ |  |   |   |   _   ||  |  | ||       ||   | | ||   _   |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_2();
+    printf("   |_     _||    ___||   _   ||   | ||  |   |   |  |_|  ||   |_| ||    ___||   |_| ||  |_|  |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_3();
+    printf("     |   |  |   |___ |  | |  ||   |_||_ |   |   |       ||       ||   | __ |      _||       |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_4();
+    printf("     |   |  |    ___||  |_|  ||    __  ||   |   |       ||  _    ||   ||  ||     |_ |       |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_5();
+    printf("     |   |  |   |___ |       ||   |  | ||   |   |   _   || | |   ||   |_| ||    _  ||   _   |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf("     |___|  |_______||_______||___|  |_||___|   |__| |__||_|  |__||_______||___| |_||__| |__|");
+    putih();
+    printf("   ||\n");
+    printf("||                                                                                                ||\n");
+    printf("====================================================================================================\n");
+    reset();
+}
+
+void FPB_design()
+{
+    system("cls");
+    putih();
+    printf("===================================\n");
+    printf("||");
+    gradasi_warna_5_6();
+    printf("  _______  _______  _______ ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_5_6();
+    printf(" |       ||       ||  _    |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_5_5();
+    printf(" |    ___||    _  || |_|   |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_5_4();
+    printf(" |   |___ |   |_| ||       |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_5_3();
+    printf(" |    ___||    ___||  _   | ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_5_2();
+    printf(" |   |    |   |    | |_|   |");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_5_1();
+    printf(" |___|    |___|    |_______|");
+    putih();
+    printf("   ||\n");
+    printf("||                               ||\n");
+    printf("===================================\n");
+    reset();
+}
+
+void KPK_design()
+{
+    system("cls");
+    putih();
+    printf("===================================\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf("  ___   _  _______  ___   _  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_6();
+    printf(" |   | | ||       ||   | | | ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_5();
+    printf(" |   |_| ||    _  ||   |_| | ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_4();
+    printf(" |      _||   |_| ||      _| ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_3();
+    printf(" |     |_ |    ___||     |_  ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_2();
+    printf(" |    _  ||   |    |    _  | ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_1_1();
+    printf(" |___| |_||___|    |___| |_| ");
+    putih();
+    printf("   ||\n");
+    printf("||                                ||\n");
+    printf("===================================\n");
+    reset();
+}
+
+void permutasi_dan_kombinasi_design()
+{
+    system("cls");
+    putih();
+    printf("===========================================================================================\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("  _______  _______  ______    __   __  __   __  _______  _______  _______  ___      ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf(" |       ||       ||    _ |  |  |_|  ||  | |  ||       ||   _   ||       ||   |     ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf(" |    _  ||    ___||   | ||  |       ||  | |  ||_     _||  |_|  ||  _____||   |     ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf(" |   |_| ||   |___ |   |_||_ |       ||  |_|  |  |   |  |       || |_____ |   |     ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf(" |    ___||    ___||    __  ||       ||       |  |   |  |       ||_____  ||   |     ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf(" |   |    |   |___ |   |  | || ||_|| ||       |  |   |  |   _   | _____| ||   |     ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf(" |___|    |_______||___|  |_||_|   |_||_______|  |___|  |__| |__||_______||___|     ");
+    putih();
+    printf("   ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("                          ______   _______  __    _  ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("                         |      | |   _   ||  |  | | ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf("                         |  _    ||  |_|  ||   |_| | ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf("                         | | |   ||       ||       | ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf("                         | |_|   ||       ||  _    | ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf("                         |       ||   _   || | |   | ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("                         |______| |__| |__||_|  |__| ");
+    putih();
+    printf("                                  ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("    ___   _  _______  __   __  _______  ___   __    _  _______  _______  ___");
+    putih();
+    printf("           ||\n");
+    printf("||");
+    gradasi_warna_6_1();
+    printf("   |   | | ||       ||  |_|  ||  _    ||   | |  |  | ||   _   ||       ||   |");
+    putih();
+    printf("          ||\n");
+    printf("||");
+    gradasi_warna_6_2();
+    printf("   |   |_| ||   _   ||       || |_|   ||   | |   |_| ||  |_|  ||  _____||   |");
+    putih();
+    printf("          ||\n");
+    printf("||");
+    gradasi_warna_6_3();
+    printf("   |      _||  | |  ||       ||       ||   | |       ||       || |_____ |   |");
+    putih();
+    printf("          ||\n");
+    printf("||");
+    gradasi_warna_6_4();
+    printf("   |     |_ |  |_|  ||       ||  _   | |   | |  _    ||       ||_____  ||   |");
+    putih();
+    printf("          ||\n");
+    printf("||");
+    gradasi_warna_6_5();
+    printf("   |    _  ||       || ||_|| || |_|   ||   | | | |   ||   _   | _____| ||   |");
+    putih();
+    printf("          ||\n");
+    printf("||");
+    gradasi_warna_6_6();
+    printf("   |___| |_||_______||_|   |_||_______||___| |_|  |__||__| |__||_______||___|");
+    putih();
+    printf("          ||\n");
+    printf("||                                                                                       ||\n");
+    printf("===========================================================================================\n");
+    reset();
+}
+
+void permutasi_design()
+{
+    system("cls");
+    putih();
+    printf("======================================================================================\n");
+    printf("||");
+    gradasi_warna_4_6();
+    printf("  _______  _______  ______    __   __  __   __  _______  _______  _______  ___   ");
+    putih();
+    printf(" ||\n");
+    printf("||");
+    gradasi_warna_4_6();
+    printf(" |       ||       ||    _ |  |  |_|  ||  | |  ||       ||   _   ||       ||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_5();
+    printf(" |    _  ||    ___||   | ||  |       ||  | |  ||_     _||  |_|  ||  _____||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_4();
+    printf(" |   |_| ||   |___ |   |_||_ |       ||  |_|  |  |   |  |       || |_____ |   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_3();
+    printf(" |    ___||    ___||    __  ||       ||       |  |   |  |       ||_____  ||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_2();
+    printf(" |   |    |   |___ |   |  | || ||_|| ||       |  |   |  |   _   | _____| ||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_4_1();
+    printf(" |___|    |_______||___|  |_||_|   |_||_______|  |___|  |__| |__||_______||___|   ");
+    putih();
+    printf("||\n");
+    printf("||                                                                                  ||\n");
+    printf("======================================================================================\n");
+    reset();
+}
+
+void kombinasi_design()
+{
+    system("cls");
+    putih();
+    printf("==================================================================================\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf("  ___   _  _______  __   __  _______  ___   __    _  _______  _______  ___   ");
+    putih();
+    printf(" ||\n");
+    printf("||");
+    gradasi_warna_3_6();
+    printf(" |   | | ||       ||  |_|  ||  _    ||   | |  |  | ||   _   ||       ||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_5();
+    printf(" |   |_| ||   _   ||       || |_|   ||   | |   |_| ||  |_|  ||  _____||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_4();
+    printf(" |      _||  | |  ||       ||       ||   | |       ||       || |_____ |   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_3();
+    printf(" |     |_ |  |_|  ||       ||  _   | |   | |  _    ||       ||_____  ||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_2();
+    printf(" |    _  ||       || ||_|| || |_|   ||   | | | |   ||   _   | _____| ||   |   ");
+    putih();
+    printf("||\n");
+    printf("||");
+    gradasi_warna_3_1();
+    printf(" |___| |_||_______||_|   |_||_______||___| |_|  |__||__| |__||_______||___|   ");
+    putih();
+    printf("||\n");
+    printf("||                                                                              ||\n");
+    printf("==================================================================================\n");
+    reset();
+}
+
 void bidangtiga();
 void bidangdua();
 
@@ -40,6 +1840,7 @@ int power(int a, int b){
 }  
 
 void permutation(){
+    permutasi_design();
     int n, r;
     printf("Input n: ");scanf("%d", &n);
     printf("Input r: ");scanf("%d", &r);
@@ -71,6 +1872,7 @@ void permutation(){
 }
 
 void combination(){
+    kombinasi_design();
     int n, r;
     printf("Input n: ");scanf("%d", &n);
     printf("Input r: ");scanf("%d", &r);
@@ -103,6 +1905,7 @@ void combination(){
 
 double persegi(double* area, double* perimeter, double* sisi){
     double r;
+    persegi_design();
     printf("Masukkan panjang sisi persegi: "); scanf("%lf", &r);
     *area = r*r;
     *perimeter = 4*r;
@@ -111,6 +1914,7 @@ double persegi(double* area, double* perimeter, double* sisi){
 
 double persegi_panjang(double* area, double* perimeter){
     double p, l;
+    persegi_panjang_design();
     printf("Masukkan panjang: "); scanf("%lf", &p);
     printf("Masukkan lebar  : "); scanf("%lf", &l);
     *area = p*l;
@@ -119,6 +1923,7 @@ double persegi_panjang(double* area, double* perimeter){
 
 double lingkaran(double* area, double* perimeter, double*radius){
     double r;
+    lingkaran_design();
     printf("Masukkan radius lingkaran: ");scanf("%lf", &r);
     *area = M_PI*r*r;
     *perimeter = M_PI*2*r;
@@ -127,6 +1932,7 @@ double lingkaran(double* area, double* perimeter, double*radius){
 
 double segitiga(double* area, double* perimeter, double* alas, double* tinggi){
     double a, t;
+    segitiga_design();
     printf("Masukkan panjang sisi segitiga: ");scanf("%lf", &a);
     printf("Masukkan tinggi segitiga: ");scanf("%lf", &t);
     *area = (a*t)/2;
@@ -136,10 +1942,11 @@ double segitiga(double* area, double* perimeter, double* alas, double* tinggi){
 
 double trapezium(double* area, double* perimeter){
     double alas, t, tutup, sisi;
-    printf("Masukkan panjang alas trapezium: ");scanf("%lf", &alas);
-    printf("Masukkan panjang tutup trapezium: ");scanf("%lf", &tutup);
-    printf("Masukkan tinggi trapezium: ");scanf("%lf", &t);
-    printf("Masukkan panjang sisi trapezium: ");scanf("%lf", &sisi);
+    trapesium_design();
+    printf("Masukkan panjang alas trapesium: ");scanf("%lf", &alas);
+    printf("Masukkan panjang tutup trapesium: ");scanf("%lf", &tutup);
+    printf("Masukkan tinggi trapesium: ");scanf("%lf", &t);
+    printf("Masukkan panjang sisi trapesium: ");scanf("%lf", &sisi);
     *area = ((alas+tutup)/2)*t;
     *perimeter = alas+2*sisi+tutup;
 }
@@ -147,12 +1954,13 @@ double trapezium(double* area, double* perimeter){
 void bidangdua(){
 //persegi, persegi panjang, lingkaran, segitiga, trapezium
     int selection;
+    bidang_dua_design();
     printf("Pilih bidang dua: (Masukkan angka depan pilihan)\n");
     printf("1. Persegi\n");
     printf("2. Persegi Panjang\n");
     printf("3. Lingkaran\n");
     printf("4. Segitiga (Sama Sisi)\n");
-    printf("5. Trapezium\n");
+    printf("5. Trapesium\n");
     printf("0. Kembali ke menu utama\n");
     scanf("%d", &selection);
     double area, perimeter;
@@ -208,6 +2016,7 @@ void bidangdua(){
 
 double kubus(double* volume, double* surface){
     double r;
+    kubus_design();
     printf("Masukkan panjang rusuk kubus: "); scanf("%lf", &r);
     *volume = r*r*r;
     *surface = 6*r*r;
@@ -215,6 +2024,7 @@ double kubus(double* volume, double* surface){
 
 double balok(double* volume, double* surface){
     double p,l,t;
+    balok_design();
     printf("Masukkan panjang: "); scanf("%lf", &p);
     printf("Masukkan lebar  : "); scanf("%lf", &l);
     printf("Masukkan tinggi : "); scanf("%lf", &t);
@@ -224,6 +2034,7 @@ double balok(double* volume, double* surface){
 
 double bola(double* volume, double* surface){
     double r;
+    bola_design();
     printf("Masukkan radius bola: ");scanf("%lf", &r);
     *volume = 1.33*M_PI*r*r*r;
     *surface = 4*M_PI*r*r;
@@ -239,6 +2050,7 @@ double prisma_segitiga(double* volume, double* surface){
 
 double tabung(double* volume, double* surface){
     double area, perimeter, tinggi, nullradius;
+    tabung_design();
     lingkaran(&area, &perimeter, &nullradius);
     printf("Masukkan tinggi tabung: ");scanf("%lf", &tinggi);
     *volume = area*tinggi;
@@ -291,6 +2103,7 @@ void prisma(){
 double limas_segitiga(double* volume, double* surface){
     double area, perimeter, tinggi, tinggisisi, sisi, tinggisegitiga;
     segitiga(&area, &perimeter, &sisi, &tinggisegitiga);
+    limas_segitiga_design();
     printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
     tinggisisi=findSqrt(0.25*(sisi*sisi)+(tinggisegitiga*tinggisegitiga));
     *volume = 0.33*area*tinggi;
@@ -300,6 +2113,7 @@ double limas_segitiga(double* volume, double* surface){
 double limas_persegi(double* volume, double* surface){
     double area, perimeter, tinggi, sisi;
     persegi(&area, &perimeter, &sisi);
+    limas_persegi_design();
     printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
     double tinggiSisi=findSqrt(tinggi*tinggi+(0.5*sisi)*(0.5*sisi));
     double luasSisi=0.5*tinggiSisi*sisi;
@@ -310,12 +2124,14 @@ double limas_persegi(double* volume, double* surface){
 double kerucut(double* volume, double* surface){
     double area, perimeter, tinggi, radius;
     lingkaran(&area, &perimeter, &radius);
+    limas_kerucut_design();
     printf("Masukkan tinggi limas: ");scanf("%lf", &tinggi);
     *volume = tinggi/3*area;
     *surface = M_PI*radius*(radius+findSqrt(tinggi*tinggi+radius*radius));
 }
 
 void limas(){
+    limas_design();
     printf("Pilih limas: (ketik pililhan)\n");
     printf("1. Segitiga\n");
     printf("2. Persegi\n");
@@ -351,6 +2167,7 @@ void limas(){
 void bidangtiga(){
 //kubus, balok, bola, prisma&tabung, limas, 
     int selection;
+    bidang_tiga_design();
     printf("Pilih bidang ruang: (Masukkan angka depan pilihan)\n");
     printf("1. Kubus\n");
     printf("2. Balok\n");
@@ -409,6 +2226,7 @@ void teori_angka();
 
 void gcd(){
     int a, b, r;
+    FPB_design();
     printf("Input integer pertama   : ");scanf("%d", &a);
     printf("Input integer kedua     : ");scanf("%d", &b);
     int a_awal = a;
@@ -445,6 +2263,7 @@ void gcd(){
 
 void lcm(){
     int a, x, y;
+    KPK_design();
     printf("Input integer pertama   : ");scanf("%d", &x);
     printf("Input integer kedua     : ");scanf("%d", &y);
     a= (x > y) ? x : y;
@@ -521,6 +2340,7 @@ void exponents(){
 
 void teori_angka(){
     int selection;
+    teori_angka_design();
     printf("Pilih opsi: (Masukkan angka depan pilihan)\n");
     printf("1. FPB\n");
     printf("2. KPK\n");
@@ -550,6 +2370,7 @@ void teori_angka(){
 
 void permutasi_kombinasi(){
     int pilihOpsi;
+    permutasi_dan_kombinasi_design();
     printf("Pilih Permutasi (1) atau Kombinasi (2): \n1. Permutasi\n2. Kombinasi\n0. Kembali ke menu utama\n");
     scanf("%d", &pilihOpsi);
     switch (pilihOpsi)
@@ -572,6 +2393,7 @@ void permutasi_kombinasi(){
 
 void convCalc(){
     double val1; char operator;
+    kalkulator_konvensional_design();
     printf("Input initial value: \n");scanf("%lf",&val1);
     double result = val1;
     while (1)
@@ -650,6 +2472,7 @@ void convCalc(){
 
 void factorialCalc(){
     int n;
+    faktorial_design();
     printf("Calculate factorial of an integer\n");
     printf("Input integer: ");scanf("%d", &n);
     printf("%d! = %d\n", n, factorial(n));
@@ -686,6 +2509,7 @@ int fibonacci(int n){
 
 void fibonacciCalc(){
     int n;
+    fibonacci_design();
     printf("Input n: ");scanf("%d", &n);
     printf("%d\n",fibonacci(n));
     int choice;
@@ -708,6 +2532,7 @@ void fibonacciCalc(){
 void deretbaris();
 
 void barisAritmatika(){
+    aritmatika_design();
     printf("Mencari suku ke-n baris Aritmatika\n");
     double a, n, b;
     printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
@@ -733,6 +2558,7 @@ void barisAritmatika(){
 }
 
 void barisGeometri(){
+    geometri_design();
     printf("Mencari suku ke-n baris geometri\n");
     double a, n, r;
     printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
@@ -783,6 +2609,7 @@ void barisCalc(){
 }
 
 void deretAritmatika(){
+    aritmatika_design();
     printf("Mencari jumlah n suku pertama deret aritmatika\n");
     double a, n, b;
     printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
@@ -808,6 +2635,7 @@ void deretAritmatika(){
 }
 
 void deretGeometri(){
+    geometri_design();
     printf("Mencari jumlah n suku pertama deret geometri\n");
     double a, n, r;
     printf("Masukkan suku pertama (a): ");scanf("%lf", &a);
@@ -859,6 +2687,7 @@ void deretCalc(){
 }
 
 void deretbaris(){
+    aritmatika_dan_geometri_design();
     printf("Pilih:\n");
     printf("1. Baris\n");
     printf("2. Deret\n");
@@ -884,22 +2713,8 @@ void deretbaris(){
 }
 
 int main_process(){
-    printf("\n\n");
-    printf("=====================[ CALCULATOR DEWA ]===================\n");
-    printf("=====Samuel Maximus Lamere=====Bonifasius Martin============\n\n");
-    
-    printf("Pilih Salah Satu Opsi Berikut: (Ketikkan Angka Depan Opsi)\n");
-    printf("1. Kalkulator Konvensional (Tambah Kurang Kali Bagi Modulus)\n");
-    printf("2. Faktorial (Input 1 angka untuk mendapatkan faktorialnya.)\n");
-    printf("3. Kalkulator baris/deret aritmatika/geometri.\n");
-    printf("4. Print angka fibonacci ke-n\n");
-    printf("5. Bidang Dua\n");
-    printf("6. Bidang Tiga\n");
-    printf("7. Teori Angka (FPB, KPK, Pangkat)\n");
-    printf("8. Permutasi dan Kombinasi\n");
-    printf("9. Help\n");
-    printf("0. Exit\n");
-    
+    main_menu_design();
+
     int selectionInput;
     scanf("%d", &selectionInput);printf("\n");
     

@@ -312,13 +312,13 @@ void main_menu_design()
     merah();
     printf("(Input 1 angka untuk mendapatkan faktorialnya.)\n");
     putih();
-    printf("3. Kalkulator deret aritmatika/geometri.\n");
+    printf("3. Kalkulator deret/baris aritmatika/geometri.\n");
     printf("4. Print angka fibonacci ke-n\n");
     printf("5. Bidang Dua\n");
     printf("6. Bidang Tiga\n");
     printf("7. Teori Angka ");
     merah();
-    printf("(FPB, KPK, Converter)\n");
+    printf("(FPB, KPK, Eksponen)\n");
     putih();
     printf("8. Permutasi dan Kombinasi\n");
     printf("0. Exit\n");
@@ -2322,7 +2322,7 @@ void exponents(){
         break;
     }
     int choice;
-    printf("Ketik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
+    printf("\nKetik 1 untuk lanjutkan fungsi, ketik 0 untuk keluar ke menu utama: ");scanf("%d", &choice);
     switch (choice)
     {
     case 1:
